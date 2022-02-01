@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import logoIgreja from '../imagens/logo-igreja.png'
 import logoDbv from '../imagens/logo-dbv.png'
 import './layout.css'
+import { useState } from 'react'
 
 function Navbar({menu}){
+    const [submenu, setSubmenu] = useState('off')
+
     // funcao para adicionar eventos aos botoes é rodada sempre que o menu e alterado
     function adicionaEventoAosLinksDoMenu(){
         setTimeout(() => {
@@ -23,10 +26,20 @@ function Navbar({menu}){
         }, 1);
         
     }
+    function mudaSubmenu(){
+        if (submenu === 'off'){
+            setSubmenu('submenu-ativo')
+        }else{
+            setSubmenu('off')
+        }
+    }
+        
+        
     
 
     return (
         <nav className="navbar fixed-top navbar-expand-md">
+            
             {menu === 'igreja' && (
                 <>
                     <Link className="logo-principal" exact="true" to="/"><img src={logoIgreja} alt="logo do site" /></Link>
@@ -42,7 +55,7 @@ function Navbar({menu}){
                             <li className="nav-item">
                                 <Link to="/midias">Mídias</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className={'nav-item ' + submenu} onClick={mudaSubmenu}>
                                 <span className="link"> Diversão <i className="fal fa-angle-down"></i></span>
                                 <ul className='navbar-nav'>
                                     <li className="nav-item"><Link to="/quiz">Quiz</Link></li>

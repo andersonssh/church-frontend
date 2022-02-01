@@ -20,11 +20,16 @@
     transform: translate3d(0, -25px, 0);
     transition: transform .3s, opacity .2s;
 }
+/*ATIVA ANIMACAO PARA SUBMENUS EM MOBILE (MD PARA BAIXO)*/
+
 @media (max-width: 767px){
     .nav-item{
         margin-left: 10px;
     }
     .nav-item ul{
+        transform: translate3d(0, 0, 0);
+    }
+    .submenu-ativo ul{
         opacity: 1;
         visibility: visible;
         position: relative;
@@ -38,11 +43,15 @@
     margin-top: 13px;
     vertical-align: center;
 }
-.nav-item:hover ul{
-    visibility: visible;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
+/*DESATIVA ANIMACAO PARA SUBMENUS APARTIR DO TAMANHO MD DO BOOTSTRAP*/
+@media (min-width: 768px){
+    .nav-item:hover ul{
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
+
 .nav-item ul li{
     margin: 0;
     padding: 0px 10px;   
