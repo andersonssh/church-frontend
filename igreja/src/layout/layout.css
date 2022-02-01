@@ -21,6 +21,9 @@
     transition: transform .3s, opacity .2s;
 }
 @media (max-width: 767px){
+    .nav-item{
+        margin-left: 10px;
+    }
     .nav-item ul{
         opacity: 1;
         visibility: visible;
