@@ -1,0 +1,34 @@
+:root{
+  --cor-laranja: #EE7B30;
+  --cor-amarelo: #e5e916;
+  --cor-preto: #0E1428;
+  --cor-branco: #FFFCE8;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+a{
+  color: var(--cor-amarelo);
+  text-decoration: none;
+  transition: .4s;
+}
+a:hover{
+  color: var(--cor-laranja);
+}
+button{
+  border: 1px solid var(--cor-preto);
+  border-radius: 3px;
+  padding: 5px 15px;
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  transition: .4s;
+}
+button:hover{
+  background-color: var(--cor-laranja);
+}
+
