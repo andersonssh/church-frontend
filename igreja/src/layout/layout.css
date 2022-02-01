@@ -1,0 +1,53 @@
+.navbar{
+    border-bottom: 1px solid rgba(204, 204, 0, 0.664);
+}
+.logo-principal{
+    margin-left: 15px;
+}
+
+/*MENU*/
+.nav-item ul{
+    padding: 3px;
+    position: fixed;
+    visibility: visible;
+    opacity: 0;
+    background-color: white;
+    display: block;
+    width: 100px;
+    border: 1px solid rgba(255, 166, 0, 0.582);
+    border-radius: 5px; 
+    transform: translate3d(0, -25px, 0);
+    transition: transform .3s, opacity .2s;
+}
+.nav-item{
+    margin-top: 15px;
+    vertical-align: center;
+}
+.nav-item:hover ul{
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.nav-item ul li{
+    margin: 0;
+    padding: 0px 10px;   
+}
+.nav-item a{
+    margin: 0px 10px;
+}
+
+/*BOTAO*/
+.botao-menu-principal{
+    padding: 10px;
+    color: var(--cor-amarelo);
+    margin: 0 15px;
+    transition: .4s;
+}
+.botao-menu-principal:hover{
+    color: var(--cor-laranja);
+    background-color: inherit;
+}
+.botao-troca-site{
+    margin-top: 8px;
+    margin-right: 15px;
+}

@@ -1,6 +1,6 @@
 :root{
   --cor-laranja: #EE7B30;
-  --cor-amarelo: #e5e916;
+  --cor-amarelo: #D9AB32;
   --cor-preto: #0E1428;
   --cor-branco: #FFFCE8;
 }
@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6{
 a{
   color: var(--cor-amarelo);
   text-decoration: none;
-  transition: .4s;
+  transition: .4s color;
 }
 a:hover{
   color: var(--cor-laranja);
