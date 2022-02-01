@@ -4,18 +4,37 @@ import logoDbv from '../imagens/logo-dbv.png'
 import './layout.css'
 
 function Navbar({menu}){
+    // funcao para adicionar eventos aos botoes é rodada sempre que o menu e alterado
+    function adicionaEventoAosLinksDoMenu(){
+        setTimeout(() => {
+            // Adiciona evento para fechar menu apos clique no item
+            const navbarToggler = document.body.querySelector('.navbar-toggler');
+            const responsiveNavItems = [].slice.call(
+                // caminho para os links a serem monitorados
+                document.querySelectorAll('#menu-principal .nav-item a')
+            );
+            responsiveNavItems.map(function (responsiveNavItem) {
+                responsiveNavItem.addEventListener('click', () => {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });    
+        }, 1);
+        
+    }
+    
 
     return (
-        <nav className="navbar fixed-top navbar-expand-sm">    
-            
+        <nav className="navbar fixed-top navbar-expand-md">
             {menu === 'igreja' && (
                 <>
-                    <Link exact className="logo-principal" to="/"><img src={logoIgreja} alt="logo do site" /></Link>
+                    <Link className="logo-principal" exact="true" to="/"><img src={logoIgreja} alt="logo do site" /></Link>
                     <button id="botao-menu" className="navbar-toggler botao-menu-principal" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-expanded="false" aria-label="Toggle navigation"><i className="fas fa-bars"></i></button>
                     <div id="menu-principal" className="collapse navbar-collapse">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <Link to="/"><i className="fas fa-home"></i></Link>
+                                <Link to="/">Início</Link>
                             </li>
                             <li className="nav-item">
                                 <Link to="/meditacoes">Meditações</Link>
@@ -23,8 +42,8 @@ function Navbar({menu}){
                             <li className="nav-item">
                                 <Link to="/midias">Mídias</Link>
                             </li>
-                            <li className="nav-item item-com-submenu">
-                                <a href="#">Diversão <i class="fal fa-angle-down"></i></a>
+                            <li className="nav-item">
+                                <span className="link"> Diversão <i className="fal fa-angle-down"></i></span>
                                 <ul className='navbar-nav'>
                                     <li className="nav-item"><Link to="/quiz">Quiz</Link></li>
                                     <li className='nav-item'><Link to="/jogos">Jogos</Link></li>
@@ -40,32 +59,37 @@ function Navbar({menu}){
                             </li>
                         </ul>
                      </div>
+                     {adicionaEventoAosLinksDoMenu()}
+
                 </>
             )}
             {menu === 'dbv' && (
                 
                 <>
-                    <Link exact className="logo" to="/desbravadores"><img src={logoDbv} alt="logo do site" /><i className="fas fa-bars"></i></Link>
+                    <Link className="logo-principal" to="/desbravadores"><img src={logoDbv} alt="logo do site" /></Link>
                     <button id="botao-menu" className="navbar-toggler botao-menu-principal" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-expanded="false" aria-label="Toggle navigation"><i className="fas fa-bars"></i></button>
                     <div id="menu-principal" className="collapse navbar-collapse">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <a href="#top" className="nav-link">Início</a>
+                                <Link to="/desbravadores">Início</Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#experiencia" className="nav-link">Experiência</a>
+                                <Link to="/desbravadores/especialidades">Especialidades</Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#certificados" className="nav-link desative-menu">Certificações</a>
+                                <Link to="/desbravadores/nosso-clube">Nosso Clube</Link>
                             </li>
                             <li className="nav-item">
-                                <a href="#habilidades" className="nav-link">Habilidades</a>
+                                <Link to="/desbravadores/contato">Contato</Link>
                             </li>
-                            <li className="nav-item">
-                                <a href="#projetos" className="nav-link">Projetos</a>
+                            <li className='nav-item botao-troca-site'>
+                                <Link to="/">
+                                    <button>Igreja</button>
+                                </Link>
                             </li>
                         </ul>
-                    </div>
+                     </div>
+                     {adicionaEventoAosLinksDoMenu()}
                 </>
             )}
         </nav>

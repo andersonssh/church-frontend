@@ -12,13 +12,14 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
-a{
+a, .link{
   color: var(--cor-amarelo);
   text-decoration: none;
   transition: .4s color;
 }
-a:hover{
+a:hover, .link:hover{
   color: var(--cor-laranja);
+  cursor: pointer;
 }
 button{
   border: 1px solid var(--cor-preto);
