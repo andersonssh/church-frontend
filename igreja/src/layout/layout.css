@@ -1,5 +1,6 @@
 .navbar{
     border-bottom: 1px solid rgba(204, 204, 0, 0.664);
+    background-color: white;
 }
 .logo-principal{
     margin-left: 25px;
@@ -75,4 +76,18 @@
 .botao-troca-site{
     margin-top: 8px;
     margin-right: 25px;
+}
+
+.rodape{
+    text-align: center;
+    color: var(--cor-branco);
+    background: var(--cor-preto);
+    padding: 25px 0;
+}
+.creditos{
+    color: #f9c645;
+    text-decoration: underline;
+}
+.creditos:hover{
+    color: rgb(255, 0, 0);
 }
