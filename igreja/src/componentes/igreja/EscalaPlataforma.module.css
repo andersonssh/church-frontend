@@ -2,14 +2,9 @@
     border: 1px solid black;
 }
 .titulo{
+    display: flex;
     text-align: center;
 }
-.dados{
-
-}
-.pessoas{
-
-}
 .botao_copiar{
-
+    margin-left: 10px;
 }

@@ -5,7 +5,6 @@ import { useState } from 'react'
 function CopiarTexto({texto}){
     const [icone, setIcone] = useState('fas fa-copy')
     function acao(jose){
-        console.log(this)
         copiarTexto()
         trocarIcone()
     }
