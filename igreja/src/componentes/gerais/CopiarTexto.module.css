@@ -1,0 +1,15 @@
+.botao{
+    padding: 0 5px;
+    background-color: inherit;
+    border: none;
+    color: var(--cor-amarelo);
+    transition: color .3s, background-color .3s;
+}
+.botao:hover{
+    background-color: inherit;
+    color: black;
+}
+
+.ativo{
+    color: green;
+}
