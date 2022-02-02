@@ -1,5 +1,5 @@
 .container{
-    height: calc(70vh + 8px);
+    height: calc(100vh - 90px);
     display: flex;
 }
 @media(max-height: 500px){
