@@ -4,6 +4,8 @@ import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
 import Index from './paginas/igreja/Index'
 import IndexDbv from './paginas/dbv/IndexDbv'
+import ContatoIgreja from './paginas/igreja/ContatoIgreja'
+
 
 function App(){
   const [menu, setMenu] = useState('dbv')
@@ -14,6 +16,7 @@ function App(){
       <div className='container'>
         <Routes>
           <Route path="/" element={<Index setMenu={setMenu} />}></Route>
+          <Route path="/contato" element={<ContatoIgreja />}></Route>
           <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/>}></Route>
         </Routes>
       </div>
