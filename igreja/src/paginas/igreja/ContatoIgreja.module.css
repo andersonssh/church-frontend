@@ -1,6 +1,6 @@
 .container{
     height: calc(100vh - 90px);
-    display: flex;
+    padding-top: 100px;
 }
 @media(max-height: 500px){
     .container{
