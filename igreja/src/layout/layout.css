@@ -36,8 +36,8 @@
         position: relative;
         transform: translate3d(0, 0, 0);
         border: none;
-        border-radius: none;
-        border-bottom: 1px dashed var(--cor-amarelo);
+        border-radius: 0;
+        border-left: 1px solid var(--cor-amarelo);
     }
 }
 .nav-item{
