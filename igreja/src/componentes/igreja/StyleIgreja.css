@@ -1,0 +1,27 @@
+/*ESCALA*/
+marquee span{
+    color: rgb(4, 4, 156);
+}
+.zona-botao-escala{
+    display: flex;
+    justify-content: end;
+}
+.botao-escala{
+    background: white;
+    border: none;
+    color: black;
+    padding: 0;
+}
+.botao-escala:hover{
+    background-color: white;
+    border: none;
+    color: var(--cor-laranja);
+}
+.botao-escala:active{
+    background: inherit;
+}
+.botao-escala:focus{
+    background-color: inherit;
+    box-shadow: none;
+    color: var(--cor-laranja);
+}

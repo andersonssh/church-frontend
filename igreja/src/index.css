@@ -5,9 +5,11 @@
   --cor-branco: #FFFCE8;
 }
 body {
-  margin-top: 60px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
+}
+.container{
+  padding-top: 90px;
 }
 h1, h2, h3, h4, h5, h6{
   font-family: 'Open Sans', sans-serif;
@@ -33,4 +35,3 @@ button{
 button:hover{
   background-color: var(--cor-laranja);
 }
-
