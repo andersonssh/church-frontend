@@ -16,7 +16,7 @@ function App(){
       <div className='container'>
         <Routes>
           <Route path="/" element={<Index setMenu={setMenu} />}></Route>
-          <Route path="/contato" element={<ContatoIgreja />}></Route>
+          <Route path="/contato" element={<ContatoIgreja setMenu={setMenu} />}></Route>
           <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/>}></Route>
         </Routes>
       </div>
