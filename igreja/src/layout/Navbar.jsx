@@ -53,7 +53,7 @@ function Navbar({menu}){
                                 <Link to="/meditacoes">Meditações</Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/midias">Mídias</Link>
+                                <Link to="/galeria">Galeria</Link>
                             </li>
                             <li className={'nav-item ' + submenu} onClick={mudaSubmenu}>
                                 <span className="link"> Diversão <i className="fal fa-angle-down"></i></span>
