@@ -5,7 +5,7 @@ import Footer from './layout/Footer'
 import Index from './paginas/igreja/Index'
 import IndexDbv from './paginas/dbv/IndexDbv'
 import ContatoIgreja from './paginas/igreja/ContatoIgreja'
-
+import ContatoDbv from './paginas/dbv/ContatoDbv'
 
 function App(){
   const [menu, setMenu] = useState('dbv')
@@ -15,9 +15,11 @@ function App(){
       <Navbar menu={menu} />
       <div className='container'>
         <Routes>
-          <Route path="/" element={<Index setMenu={setMenu} />}></Route>
-          <Route path="/contato" element={<ContatoIgreja setMenu={setMenu} />}></Route>
-          <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/>}></Route>
+          <Route path="/" element={ <Index setMenu={setMenu} /> }></Route>
+          <Route path="/contato" element={ <ContatoIgreja setMenu={setMenu} /> }></Route>
+
+          <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/> }></Route>
+          <Route path="/desbravadores/contato" element={ <ContatoDbv setMenu={setMenu} /> }></Route>
         </Routes>
       </div>
       
