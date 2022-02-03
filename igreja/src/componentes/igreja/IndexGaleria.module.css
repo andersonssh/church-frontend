@@ -1,0 +1,14 @@
+.galeria{
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+.galeria, .galeria img{
+    max-width:600px;
+    max-height:400px;
+    width: auto;
+    height: auto;
+}
+.galeria div:first-child button:hover{
+    background-color: rgba(0, 0, 0, 0.226);
+}

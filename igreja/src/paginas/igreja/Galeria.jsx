@@ -1,8 +1,10 @@
+import IndexGaleria from "../../componentes/igreja/IndexGaleria"
+
 function Galeria({setMenu}){
-    setMenu('igreja')
+    
     return (
         <div>
-            pagina de midia
+            <IndexGaleria />
         </div>
     )
 }

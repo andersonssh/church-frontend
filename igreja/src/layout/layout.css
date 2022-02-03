@@ -91,3 +91,30 @@
 .creditos:hover{
     color: rgb(255, 0, 0);
 }
+
+
+
+/*BOTOES GERAIS*/
+.zona-botao-no-fim{
+    display: flex;
+    justify-content: end;
+}
+.botao-no-fim{
+    background: white;
+    border: none;
+    color: var(--cor-verde);
+    padding: 0;
+}
+.botao-no-fim:hover{
+    background-color: white;
+    border: none;
+    color: var(--cor-laranja);
+}
+.botao-no-fim:active{
+    background: inherit;
+}
+.botao-no-fim:focus{
+    background-color: inherit;
+    box-shadow: none;
+    color: var(--cor-laranja);
+}
