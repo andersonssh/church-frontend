@@ -1,7 +1,8 @@
 .galeria{
     margin: auto;
-    text-align: center;
-    justify-content: center;
+}
+.galeria .fotos div{
+    border-radius: 7px;
 }
 .galeria, .galeria img{
     max-width:600px;
@@ -9,6 +10,14 @@
     width: auto;
     height: auto;
 }
-.galeria div:first-child button:hover{
+.galeria .fotos button:hover{
     background-color: rgba(0, 0, 0, 0.226);
+}
+.galeria .fotos button:focus{
+    background-color: transparent;
+}
+.zona_botao_galeria{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }

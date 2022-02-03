@@ -1,5 +1,5 @@
 import EscalaPlataforma from "../../componentes/igreja/EscalaPlataforma"
-import Galeria from "./Galeria"
+import IndexGaleria from "../../componentes/igreja/IndexGaleria"
 import style from './Index.module.css'
 
 
@@ -9,7 +9,7 @@ function Index({setMenu}){
         <>
             <EscalaPlataforma />
             <h1 className={style.titulo}>IGREJA ADVENTISTA DE LAGOA DO CARNEIRO</h1>
-            <Galeria />
+            <IndexGaleria />
             
         </>
     )

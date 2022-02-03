@@ -20,10 +20,10 @@ function EscalaPlataforma(){
             <span>Escala</span> - {dados.dia} {dados.data}  <span>Pregador:</span> {dados.pregador} • <span>Plataforma:</span> {dados.plataforma} • <span>Parte Especial:</span> {dados.especial} • <span>Recepção:</span> {dados.recepcao}
         </marquee>
         <div className='zona-botao-no-fim'>
-            <button type="button" class="btn btn-primary botao-no-fim" data-bs-toggle="modal" data-bs-target="#escala">
+            <button type="button" className="btn btn-primary botao-no-fim" data-bs-toggle="modal" data-bs-target="#escala">
             Ver Escala Completa <i className="fal fa-angle-right"></i>
             </button>
-            <div class="modal fade" id="escala" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal fade" id="escala" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
