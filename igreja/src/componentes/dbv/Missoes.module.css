@@ -1,0 +1,25 @@
+.missoes, .especiais{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+.missoes{
+    background-color: var(--cor-preto);
+}
+.missoes .pontuacao{
+    color: red;
+}
+.especiais{
+    background-color: rgb(62, 63, 63);
+}
+.especiais .pontuacao{
+    font-weight: 700;
+    color: rgb(11, 179, 6);
+}
