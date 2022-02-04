@@ -7,6 +7,8 @@ import IndexDbv from './paginas/dbv/IndexDbv'
 import ContatoIgreja from './paginas/igreja/ContatoIgreja'
 import ContatoDbv from './paginas/dbv/ContatoDbv'
 import Galeria from './paginas/igreja/Galeria'
+import Especialidades from './paginas/dbv/Especialidades'
+import NossoClube from './paginas/dbv/NossoClube'
 
 function App(){
   const [menu, setMenu] = useState('dbv')
@@ -21,6 +23,8 @@ function App(){
           <Route path="/contato" element={ <ContatoIgreja setMenu={setMenu} /> }></Route>
 
           <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/> }></Route>
+          <Route path="/desbravadores/especialidades" element={ <Especialidades setMenu={setMenu} /> }></Route>
+          <Route path="/desbravadores/nosso-clube" element={ <NossoClube setMenu={setMenu} /> } ></Route>
           <Route path="/desbravadores/contato" element={ <ContatoDbv setMenu={setMenu} /> }></Route>
         </Routes>
       </div>
