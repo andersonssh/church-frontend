@@ -1,25 +1,39 @@
+.info, .info div{
+    display: flex;
+    justify-content: center;
+}
+.info div{
+    margin: 7px;
+}
 .missoes, .especiais{
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 250px;
-    border: 1px solid black;
+    min-height: 100px;
     padding: 10px;
     border-radius: 5px;
     color: white;
     text-align: center;
     margin: 10px;
 }
-.missoes{
+.missoes, .info_missao{
     background-color: var(--cor-preto);
 }
-.missoes .pontuacao{
-    color: red;
+.info_missao, .info_especial{
+    width: 10px;
+    height: 10px;
 }
-.especiais{
-    background-color: rgb(62, 63, 63);
+.pontuacao{
+    color: rgb(51, 255, 0);
+}
+.especiais, .info_especial{
+    background-color: #6a6acf;
+    box-shadow: 0 0 10px rgb(88, 88, 88);
+}
+.info_especial{
+    box-shadow: none;
 }
 .especiais .pontuacao{
-    font-weight: 700;
-    color: rgb(11, 179, 6);
+    text-shadow: 0 0 1px black;
 }

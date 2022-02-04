@@ -7,10 +7,10 @@ function Missoes(){
         ],
         missoes: [
             ['Tornar o amigo um desbravador', 500],
-            ['Finalizar estudo bíblico', 400],
+            ['Realizar um estudo bíblico', 400],
             ['Concluir uma nova especialidade', 200],
             ['Mensalidade em dia', 100],
-            ['Participar das reuniões', 50],
+            ['Frequência', 50],
             ['Participar dos eventos da igreja', 50],
             ['Levar um amigo', 50],
             ['Jogos do clube', '???'],
@@ -42,7 +42,16 @@ function Missoes(){
     }
     return (
         <div>
-            <h3 className='text-center mb-5'>Missões para ganhar pontos</h3>
+            <h3 className='text-center mb-5'>Como ganhar pontos?</h3>
+            <div className={'mb-3 ' + style.info}>
+                <div>
+                    <div className={style.info_especial}></div> Missão mensal
+                </div>
+                <div>
+                    <div className={style.info_missao}></div> Missão fixa
+                </div>
+                
+            </div>
             <div className="row justify-content-center mb-5">
                 {listaMissoes}
             </div>
