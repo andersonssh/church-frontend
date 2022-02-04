@@ -15,7 +15,7 @@ function Missoes(){
             ['Levar um amigo', 50],
             ['Jogos do clube', '???'],
             ['Pontualidade', 30],
-            ['Material COMPLETO', 30],
+            ['Levar Material COMPLETO', 30],
             ['Apresentação nós', 30]
         ]
     }

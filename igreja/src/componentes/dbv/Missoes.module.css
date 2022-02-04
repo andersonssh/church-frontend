@@ -29,7 +29,6 @@
 }
 .especiais, .info_especial{
     background-color: #6a6acf;
-    box-shadow: 0 0 10px rgb(88, 88, 88);
 }
 .info_especial{
     box-shadow: none;
