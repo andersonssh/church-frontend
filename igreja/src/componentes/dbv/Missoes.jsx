@@ -6,6 +6,7 @@ function Missoes(){
             ['Missão mensal (surpresa)', '300-700'],
         ],
         missoes: [
+            ['Completar a classe', 1500],
             ['Tornar o amigo um desbravador', 500],
             ['Finalizar um estudo bíblico', 400],
             ['Concluir uma nova especialidade', 200],
