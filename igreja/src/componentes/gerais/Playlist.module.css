@@ -1,0 +1,28 @@
+.playlist{
+    margin: auto;
+}
+.item{
+    text-align: center;
+    padding: 40px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(121, 121, 121, 0.473);
+    background: linear-gradient(#A0DBD7, #F3D28D);
+    color: rgb(0, 0, 0);
+    max-width: 250px;
+    height: 202px;
+    margin: 10px;
+}
+.titulo{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.botao{
+    border: none;
+    margin-top: 20px;
+    background: #f8433f;
+    border-radius: 8px;
+}
+.botao:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}

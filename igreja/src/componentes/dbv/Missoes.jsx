@@ -7,13 +7,13 @@ function Missoes(){
         ],
         missoes: [
             ['Tornar o amigo um desbravador', 500],
-            ['Realizar um estudo bíblico', 400],
+            ['Finalizar um estudo bíblico', 400],
             ['Concluir uma nova especialidade', 200],
-            ['Mensalidade em dia', 100],
+            ['Mensalidade em dia', 150],
+            ['Participar ativamente dos eventos da igreja', 100],
             ['Frequência', 50],
-            ['Participar dos eventos da igreja', 50],
-            ['Levar um amigo', 50],
-            ['Jogos do clube', '???'],
+            ['Levar um amigo à reunião', 50],
+            ['Uniforme', 30],
             ['Pontualidade', 30],
             ['Levar Material COMPLETO', 30],
             ['Apresentação nós', 30]
