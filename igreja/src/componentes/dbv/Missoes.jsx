@@ -19,7 +19,11 @@ function Missoes(){
     // CRIAR ELEMENTOS 
     let dados = {
         especiais: [
-            ['Criar o grito de guerra do clube', '350'],
+            ['Criar o grito de guerra do clube', '350', (
+                <div>
+                    O grito de guerra deverá ter pelomenos de 1-2 minutos. Onde também pode ser cantada a versão curta da mesma música de pelomenos 30 segundos.
+                </div>
+            )],
         ],
         missoes: [
             ['Finalizar um estudo bíblico', 400,(
