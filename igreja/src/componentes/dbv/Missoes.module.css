@@ -6,6 +6,7 @@
     margin: 7px;
 }
 .missoes, .especiais{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,4 +36,18 @@
 }
 .especiais .pontuacao{
     text-shadow: 0 0 1px black;
+}
+
+
+/*BOTAO INFO*/
+.botao_info{
+    border: none;
+    background-color: inherit;
+    margin: 0;
+    padding: 1px 5px;
+    margin: auto;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
 }
