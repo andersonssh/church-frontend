@@ -58,7 +58,7 @@ function Especialidades({setMenu}){
                     <div className="card-body">
                         <h5 className="card-title">{especialidades[i][0]}</h5>
                         <p className="card-text">{especialidades[i][1]}</p>
-                        <a href={especialidades[i][2]} target="_blank" className="card-link">Ver mais detalhes</a>
+                        <a href={especialidades[i][2]} target="_blank" className="card-link" style={{textDecoration: 'underline'}}>Ver cada especialidade</a>
                     </div>
                 </div>
             </div>

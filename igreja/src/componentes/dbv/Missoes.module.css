@@ -45,9 +45,13 @@
     background-color: inherit;
     margin: 0;
     padding: 1px 5px;
-    margin: auto;
+    margin: 3px;
     font-size: 20px;
     position: absolute;
     bottom: 0;
     right: 8px;
+}
+.botao_info:hover{
+    background-color: blanchedalmond;
+    color: black;
 }

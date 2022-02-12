@@ -9,7 +9,7 @@ function IndexGaleria({fotoPrincipal, fotos, galeria}){
     // passa links das fotos e gera uma div para o carrousel
     for (let i = 0; i < fotos.length; i++){
         listaFotos.push(
-            <div className="carousel-item" data-bs-interval="3000">
+            <div className="carousel-item" data-bs-interval="2700">
                 <img src={fotos[i][0]} className="d-block w-100" alt={fotos[i][1]} />
             </div>
         )
@@ -20,7 +20,7 @@ function IndexGaleria({fotoPrincipal, fotos, galeria}){
             <div className={style.galeria}>
                 <div id="carouselExampleInterval" className={"carousel slide " + style.fotos} data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="3000">
+                        <div class="carousel-item active" data-bs-interval="2700">
                             <img src={fotoPrincipal[0]} class="d-block w-100" alt={fotoPrincipal[1]} />
                         </div>
                         {listaFotos}

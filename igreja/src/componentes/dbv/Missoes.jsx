@@ -19,7 +19,7 @@ function Missoes(){
     // CRIAR ELEMENTOS 
     let dados = {
         especiais: [
-            ['Criar o grito de guerra do clube', '350', (
+            ['Criar o grito de guerra do clube', '750', (
                 <div>
                     O grito de guerra deverá ter pelomenos de 1-2 minutos. Onde também pode ser cantada a versão curta da mesma música de pelomenos 30 segundos.
                 </div>
@@ -41,12 +41,15 @@ function Missoes(){
                     Pagar a mensalidade até o último dia do mês.
                 </div>
             )],
-            ['Levar um amigo à reunião', 50, (
+            ['Levar um amigo à reunião', 100, (
                 <div>Levar um amigo a Reunião dos desbravadores. A pontuação é dada uma vez para cada nova pessoa.</div>
             )],
             ['Participar ativamente dos eventos da igreja', 100, (
                 <div>
-                    Participar dos eventos promovidos pela igreja. Aqueles que ajudarem e se dedicarem visívelmente além do esperado, poderão atingir mais pontos.
+                    <div>Participar dos eventos promovidos pela igreja. Aqueles que ajudarem e se dedicarem visívelmente além do esperado, poderão atingir mais pontos.</div>
+                    <div>os pontos serão dados de acordo com a formula:</div>
+
+                    <div style={{color: 'red'}}>(100 + 50 * número de dias)</div>
                 </div>
             )],
             ['Frequência', 50, (
