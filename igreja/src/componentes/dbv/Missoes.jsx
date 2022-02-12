@@ -21,14 +21,17 @@ function Missoes(){
         especiais: [
             ['Criar o grito de guerra do clube', '750', (
                 <div>
-                    O grito de guerra deverá ter pelomenos de 1-2 minutos. Onde também pode ser cantada a versão curta da mesma música de pelomenos 30 segundos.
+                    O grito de guerra deverá ter pelomenos de 1-2 minutos. Onde também pode ser cantada a versão curta da mesma ou de outra música de pelomenos 30 segundos.
                 </div>
             )],
         ],
         missoes: [
-            ['Finalizar um estudo bíblico', 400,(
+            ['Finalizar um estudo bíblico', 900, (
                     <div>
-                        Em dupla, dar um estudo bíblico completo para alguém.
+                        <div>Em dupla, dar um estudo bíblico completo para alguém.</div>
+                        <div>Caso a pessoa desista por conta própria, será avaliado a quantidade de pontos.</div>
+                        <div>A avaliação por desistência só se dará se o estudo tiver tempo mínimo de 2 meses</div> 
+                        <div style={{color: 'red'}}>Para mais de 1 estudo bíblico a pontuação pode sofrer alterações.<br />Para maior equilíbrio, apenas estudos apartir de fevereiro de 2022 serão contados.</div>
                     </div>
                 )],
             ['Concluir uma nova especialidade', 200, (
@@ -47,7 +50,7 @@ function Missoes(){
             ['Participar ativamente dos eventos da igreja', 100, (
                 <div>
                     <div>Participar dos eventos promovidos pela igreja. Aqueles que ajudarem e se dedicarem visívelmente além do esperado, poderão atingir mais pontos.</div>
-                    <div>os pontos serão dados de acordo com a formula:</div>
+                    <div>Os pontos serão dados de acordo com a formula:</div>
 
                     <div style={{color: 'red'}}>(100 + 50 * número de dias)</div>
                 </div>

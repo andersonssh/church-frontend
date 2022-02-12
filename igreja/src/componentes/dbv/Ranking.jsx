@@ -5,10 +5,20 @@ import style from './Ranking.module.css'
 function Ranking(){
     const dados = {
         pessoas: [
-            [1, 'João Cleber', 500],
-            [2, 'Maria Souza', 400],
-            [3, 'Pedro José', 350],
-            [4, 'Maria Freitas', 340]
+            [1, 'Luciana', 330],
+            [2, 'Andrey', 280],
+            [3, 'Jonatas', 240],
+            [3, 'Lucivânia', 240],
+            [4, 'Cecília', 210],
+            [5, 'Ana Glória', 200],
+            [5, 'Giliarde', 200],
+            [5, 'Andressa', 200],
+            [6, 'Pedro Régis', 180],
+            [7, 'Ellen', 170],
+            [8, 'Bia', 170],
+            [9, 'Levi', 160],
+            [10, 'Clarice', 150]
+
         ]
     }
 
