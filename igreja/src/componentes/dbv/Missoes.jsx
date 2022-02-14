@@ -4,9 +4,10 @@ import { useState } from 'react'
 
 function Missoes(){
     function abrirModal(tipo, indice){
+
         if (tipo === 'especial'){
             setTituloModal(dados.especiais[indice][0])
-            setInfoModal(dados.especiais[indice][3])
+            setInfoModal(dados.especiais[indice][2])
         }else if (tipo === 'comum'){
             setTituloModal(dados.missoes[indice][0])
             setInfoModal(dados.missoes[indice][2])
@@ -100,10 +101,11 @@ function Missoes(){
     }
         
     let listaMissoes = []
+    
     // adicionando primeiro as missoes especiais
     for (let i = 0; i < dados.especiais.length; i++){
         listaMissoes.push(
-            <div onClick={ () => abrirModal('especial', i) }className={'col-sm-6 col-md-4 col-lg-3 ' + style.especiais}>
+            <div onClick={ () => abrirModal('especial', i) } className={'col-sm-6 col-md-4 col-lg-3 ' + style.especiais}>
                 <button className={style.botao_info}><i class="fas fa-info-circle" data-bs-toggle="modal" data-bs-target="#infoMissao"></i></button>
                 <div>{dados.especiais[i][0]}</div>
                 <div className={style.pontuacao}>{dados.especiais[i][1]} pontos</div>
