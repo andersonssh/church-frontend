@@ -5,6 +5,7 @@ import style from './Ranking.module.css'
 function Ranking(){
     const dados = {
         pessoas: [
+            [0, 'anderson', 100000],
             [1, 'Luciana', 330],
             [2, 'Andrey', 280],
             [3, 'Jonatas', 240],
