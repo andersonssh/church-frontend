@@ -4,8 +4,21 @@
     border: 1px solid black;
     padding: 5px;
     border-radius: 5px;
+    position: relative;
 }
 .titulo{
     text-align: center;
     margin: 20px 0;
+}
+.botao_detalhes{
+    position: absolute;
+    color: black;
+    right: 6px;
+    padding: 2px !important;
+    border: none;
+    margin: 7px;
+}
+.botao_detalhes:hover{
+    background-color: inherit;
+    color: var(--cor-laranja);
 }

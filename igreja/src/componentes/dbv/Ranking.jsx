@@ -1,34 +1,54 @@
 import { Link } from "react-router-dom"
 import style from './Ranking.module.css'
+import { useState, useEffect } from 'react'
+import api from '../../servicos/api'
 
 
 function Ranking(){
-    const dados = {
-        pessoas: [
-            [1, 'Luciana', 330],
-            [2, 'Andrey', 280],
-            [3, 'Jonatas', 240],
-            [3, 'Lucivânia', 240],
-            [4, 'Cecília', 210],
-            [5, 'Ana Glória', 200],
-            [5, 'Giliarde', 200],
-            [5, 'Andressa', 200],
-            [6, 'Pedro Régis', 180],
-            [7, 'Ellen', 170],
-            [8, 'Bia', 170],
-            [9, 'Levi', 160],
-            [10, 'Clarice', 150]
-
-        ]
+    function detalhesDosPontos(nome_dbv, total_de_pontos, detalhes_dos_pontos){
+        let blocoDetalhesDosPontos = []
+        for(let i = 0; i < detalhes_dos_pontos.length; i++){
+            let pontuacao = detalhes_dos_pontos[i].points
+            let descricao = detalhes_dos_pontos[i].description
+            let cor = 'green';
+            if(pontuacao < 0){
+                cor = 'red'
+            }
+            let pontuacao_colorida = <span style={{color: cor}}>{pontuacao > 0 ? '+': ''}{pontuacao}</span>
+            blocoDetalhesDosPontos.push(
+                <div>{pontuacao_colorida} {'->'} {descricao}</div>
+            )
+        }
+        setTituloModal(
+            <div>
+                {nome_dbv} com <span style={{color: 'blue'}}>{total_de_pontos}</span> pontos
+            </div>
+        )
+        setInfoModal(blocoDetalhesDosPontos)
     }
+    const [tituloModal, setTituloModal] = useState()
+    const [infoModal, setInfoModal] = useState()
+    const [rank, setRank] = useState([])
 
-    let ranking = []
-    for (let i = 0; i < dados.pessoas.length; i++){
-        ranking.push(
+    useEffect(() => {
+        api.get('/ranking')
+        .then((response) => setRank(response.data))
+        .catch((err) => {
+            console.error('ERRO AO ENVIAR REQUISICAO PARA A API: ' + err)
+        })
+    }, [])
+
+
+
+    let bloco_ranking = []
+    for (let i = 0; i < rank.length; i++){
+        bloco_ranking.push(
             <tr>
-                <th scope="row">{ dados.pessoas[i][0] }</th>
-                <td>{ dados.pessoas[i][1] }</td>
-                <td>{ dados.pessoas[i][2]} </td>
+                <th scope="row">{ i + 1 }</th>
+                <td>{ rank[i][0] }</td>
+                <td>{ rank[i][1]}</td>
+                <button className={style.botao_detalhes} onClick={() => detalhesDosPontos(rank[i][0], rank[i][1], rank[i][2])}
+                 data-bs-toggle="modal" data-bs-target="#infoRank"><i class="fas fa-info-circle"> Detalhes</i></button>
             </tr>
         )
     }
@@ -48,9 +68,25 @@ function Ranking(){
                     </tr>
                 </thead>
                 <tbody>
-                    { ranking }
+                    { bloco_ranking }
                 </tbody>
             </table>    
+            </div>
+            <div class="modal fade" id="infoRank" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">{tituloModal}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {infoModal}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Entendido!</button>
+                    </div>
+                    </div>
+                </div>
             </div>
         </>
         
