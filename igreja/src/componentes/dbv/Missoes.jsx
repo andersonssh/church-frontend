@@ -35,25 +35,25 @@ function Missoes(){
                         <div style={{color: 'red'}}>Para mais de 1 estudo bíblico a pontuação pode sofrer alterações.<br />Para maior equilíbrio, apenas estudos apartir de fevereiro de 2022 serão contados.</div>
                     </div>
                 )],
+            ['Mensalidade em dia', 250, (
+                <div>
+                    Pagar a mensalidade até o último dia do mês.
+                </div>
+            )],
             ['Concluir uma nova especialidade', 200, (
                 <div>
                     Finalizar uma especialidade sozinho ou em grupo.
                 </div>
             )],
-            ['Mensalidade em dia', 150, (
-                <div>
-                    Pagar a mensalidade até o último dia do mês.
-                </div>
-            )],
             ['Levar um amigo à reunião', 100, (
-                <div>Levar um amigo a Reunião dos desbravadores. A pontuação é dada uma vez para cada nova pessoa.</div>
+                <div>Levar um amigo a Reunião dos desbravadores. A pontuação é dada apenas uma vez para cada nova pessoa.</div>
             )],
             ['Participar ativamente dos eventos da igreja', 100, (
                 <div>
                     <div>Participar dos eventos promovidos pela igreja. Aqueles que ajudarem e se dedicarem visívelmente além do esperado, poderão atingir mais pontos.</div>
                     <div>Os pontos serão dados de acordo com a formula:</div>
 
-                    <div style={{color: 'red'}}>(100 + 50 * número de dias)</div>
+                    <div style={{color: 'red'}}>(100 + 50 x número de dias)</div>
                 </div>
             )],
             ['Frequência', 50, (
@@ -81,20 +81,9 @@ function Missoes(){
                     Em uma única tentativa, apresentar o nó corretamente.
                 </div>
             )],
-            ['Dinâmicas', '10-50', (
+            ['Dinâmicas', '????', (
                 <div>
-                    Pontuação para cada dinâmica individual:
-                    <div>1º lugar: 60</div>
-                    <div>2º lugar: 40</div>
-                    <div>3º lugar: 30</div>
-                    <div>4º lugar: 20</div>
-                    <div>5º lugar: 10</div>
-                    <div>6º lugar +: 10</div>
-                    Pontuação para cada dinâmica em grupo:
-                    <div>1º lugar: 60</div>
-                    <div>2º lugar: 40</div>
-                    <div>3º lugar: 20</div>
-                    <div>4º lugar + : 20</div>
+                    Indeterminado
                 </div>
             )]
         ]
