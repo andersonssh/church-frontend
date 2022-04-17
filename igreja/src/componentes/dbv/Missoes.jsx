@@ -45,7 +45,7 @@ function Missoes(){
                     Finalizar uma especialidade sozinho ou em grupo.
                 </div>
             )],
-            ['Levar um amigo à reunião', 100, (
+            ['Levar um amigo à reunião', 150, (
                 <div>Levar um amigo a Reunião dos desbravadores. A pontuação é dada apenas uma vez para cada nova pessoa.</div>
             )],
             ['Participar ativamente dos eventos da igreja', 100, (
