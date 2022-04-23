@@ -1,10 +1,9 @@
 import style from './SlidesFotos.module.css'
 import { Link } from 'react-router-dom'
 
-function IndexGaleria({fotoPrincipal, fotos, galeria}){
+function IndexGaleria({fotoPrincipal, fotos}){
     // foto principal deve conter [link, alt]
     // fotos[link, alt]
-    // isGaleria [trueOUfalse, caminhoParaAGaleria]
     let listaFotos =[]
     // passa links das fotos e gera uma div para o carrousel
     for (let i = 0; i < fotos.length; i++){
@@ -35,11 +34,9 @@ function IndexGaleria({fotoPrincipal, fotos, galeria}){
                     </button>
                     </div>
             </div>
-            {galeria[0] === true && (
-                <div className={style.zona_botao_galeria}>
-                    <Link to={galeria[1]}><button className={style.botao_galeria}>Ir para a Galeria</button></Link>
-                </div>
-            )}
+            <div className={style.zona_botao_galeria}>
+                <a href="#"><button className={style.botao_galeria}>Ir para a Galeria</button></a>
+            </div>
         </>
     )
 }

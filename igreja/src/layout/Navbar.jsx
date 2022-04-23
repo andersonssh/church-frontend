@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import logoIgreja from '../imagens/logo-igreja.png'
-import logoDbv from '../imagens/logo-dbv.png'
+import logoIgreja from '../images/logo-igreja.png'
+import logoDbv from '../images/logo-dbv.png'
 import './layout.css'
 import { useState } from 'react'
 
@@ -49,21 +49,12 @@ function Navbar({menu}){
                             <li className="nav-item">
                                 <Link to="/">Início</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link to="/meditacoes">Meditações</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/galeria">Galeria</Link>
-                            </li>
                             <li className={'nav-item ' + submenu} onClick={mudaSubmenu}>
                                 <span className="link"> Diversão <i className="fal fa-angle-down"></i></span>
                                 <ul className='navbar-nav'>
                                     <li className="nav-item"><Link to="/quiz">Quiz</Link></li>
                                     <li className='nav-item'><Link to="/jogos">Jogos</Link></li>
                                 </ul>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/contato">Contato</Link>
                             </li>
                             <li className='nav-item botao-troca-site'>
                                 <Link to="/desbravadores">
@@ -88,12 +79,6 @@ function Navbar({menu}){
                             </li>
                             <li className="nav-item">
                                 <Link to="/desbravadores/especialidades">Especialidades</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/desbravadores/nosso-clube">Nosso Clube</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/desbravadores/contato">Contato</Link>
                             </li>
                             <li className='nav-item botao-troca-site'>
                                 <Link to="/">

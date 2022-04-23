@@ -1,6 +1,6 @@
 import style from './EscalaPlataforma.module.css'
 import './StyleIgreja.css'
-import CopiarTexto from '../gerais/CopiarTexto'
+import CopiarTexto from './CopiarTexto'
 
 
 function EscalaPlataforma(){
