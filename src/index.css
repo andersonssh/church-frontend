@@ -25,7 +25,7 @@ a:hover, .link:hover{
   color: var(--cor-laranja);
   cursor: pointer;
 }
-button{
+.button-standart{
   border: 1px solid var(--cor-preto);
   border-radius: 3px;
   padding: 5px 15px;
@@ -33,7 +33,7 @@ button{
   color: var(--cor-branco);
   transition: .4s;
 }
-button:hover{
+.button-standart:hover{
   background-color: var(--cor-laranja);
 }
 

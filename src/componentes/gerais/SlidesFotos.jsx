@@ -35,7 +35,7 @@ function IndexGaleria({fotoPrincipal, fotos}){
                     </div>
             </div>
             <div className={style.zona_botao_galeria}>
-                <a href="#"><button className={style.botao_galeria}>Ir para a Galeria</button></a>
+                <a href="#"><button className={style.botao_galeria + ' button-standart'}>Ir para a Galeria</button></a>
             </div>
         </>
     )

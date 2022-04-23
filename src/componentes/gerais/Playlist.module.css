@@ -18,9 +18,12 @@
 }
 .botao{
     border: none;
+    padding: 5px 15px;
     margin-top: 20px;
     background: #f8433f;
+    color: var(--cor-branco);
     border-radius: 8px;
+    transition: .4s;
 }
 .botao:hover{
     background-color: white;

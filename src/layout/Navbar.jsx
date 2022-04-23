@@ -58,7 +58,7 @@ function Navbar({menu}){
                             </li>
                             <li className={'nav-item ' + style.botao_troca_site}>
                                 <Link to="/desbravadores">
-                                    <button>Desbravadores</button>
+                                    <button className='button-standart'>Desbravadores</button>
                                 </Link>
                             </li>
                         </ul>
@@ -82,7 +82,7 @@ function Navbar({menu}){
                             </li>
                             <li className='nav-item botao-troca-site'>
                                 <Link to="/">
-                                    <button>Igreja</button>
+                                    <button className='button-standart'>Igreja</button>
                                 </Link>
                             </li>
                         </ul>
