@@ -80,7 +80,7 @@ function Navbar({menu}){
                             <li className="nav-item">
                                 <Link to="/desbravadores/especialidades">Especialidades</Link>
                             </li>
-                            <li className='nav-item botao-troca-site'>
+                            <li className={'nav-item ' + style.botao_troca_site}>
                                 <Link to="/">
                                     <button className='button-standart'>Igreja</button>
                                 </Link>
