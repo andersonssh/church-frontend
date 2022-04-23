@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import style from './Ranking.module.css'
 import { useState, useEffect } from 'react'
-import api from '../../servicos/api'
+import api from '../../services/api'
 
 
 function Ranking(){

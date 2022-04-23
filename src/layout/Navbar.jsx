@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import logoIgreja from '../images/logo-igreja.png'
 import logoDbv from '../images/logo-dbv.png'
-import './layout.css'
+import style from './Navbar.module.css'
 import { useState } from 'react'
 
 function Navbar({menu}){
@@ -43,7 +43,7 @@ function Navbar({menu}){
             {menu === 'igreja' && (
                 <>
                     <Link className="logo-principal" exact="true" to="/"><img src={logoIgreja} alt="logo do site" /></Link>
-                    <button id="botao-menu" className="navbar-toggler botao-menu-principal" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-expanded="false" aria-label="Toggle navigation"><i className="fas fa-bars"></i></button>
+                    <button id="botao-menu" className={"navbar-toggler " + style.botao_menu_principal} type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-expanded="false" aria-label="Toggle navigation"><i className="fas fa-bars"></i></button>
                     <div id="menu-principal" className="collapse navbar-collapse">
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
@@ -56,7 +56,7 @@ function Navbar({menu}){
                                     <li className='nav-item'><Link to="/jogos">Jogos</Link></li>
                                 </ul>
                             </li>
-                            <li className='nav-item botao-troca-site'>
+                            <li className={'nav-item ' + style.botao_troca_site}>
                                 <Link to="/desbravadores">
                                     <button>Desbravadores</button>
                                 </Link>

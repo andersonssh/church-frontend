@@ -1,0 +1,111 @@
+:root{
+  --cor-laranja: #EE7B30;
+  --cor-amarelo: #D9AB32;
+  --cor-preto: #0E1428;
+  --cor-branco: #FFFCE8;
+  --cor-verde: #135351;
+}
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+.container{
+  padding-top: 90px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+a, .link{
+  color: var(--cor-amarelo);
+  text-decoration: none;
+  transition: .4s color;
+}
+a:hover, .link:hover{
+  color: var(--cor-laranja);
+  cursor: pointer;
+}
+button{
+  border: 1px solid var(--cor-preto);
+  border-radius: 3px;
+  padding: 5px 15px;
+  background-color: var(--cor-preto);
+  color: var(--cor-branco);
+  transition: .4s;
+}
+button:hover{
+  background-color: var(--cor-laranja);
+}
+
+/*Titulos principais das paginas*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.titulo-principal{
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+}
+
+/*      NAVBAR       */
+.navbar{
+  border-bottom: 1px solid rgba(204, 204, 0, 0.664);
+  background-color: white;
+}
+.logo-principal{
+  margin-left: 25px;
+}
+
+/*MENU*/
+
+.nav-item ul{
+  padding: 3px;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  display: block;
+  width: 100px;
+  border: 1px solid rgba(255, 166, 0, 0.582);
+  border-radius: 5px; 
+  transform: translate3d(0, -25px, 0);
+  transition: transform .3s, opacity .2s;
+}
+/*ATIVA ANIMACAO PARA SUBMENUS EM MOBILE (MD PARA BAIXO)*/
+
+@media (max-width: 767px){
+  .nav-item{
+      margin-left: 10px;
+  }
+  .nav-item ul{
+      transform: translate3d(0, 0, 0);
+  }
+  .submenu-ativo ul{
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+      transform: translate3d(0, 0, 0);
+      border: none;
+      border-radius: 0;
+      border-left: 1px solid var(--cor-amarelo);
+  }
+}
+.nav-item{
+  margin-top: 13px;
+  vertical-align: center;
+}
+/*DESATIVA ANIMACAO PARA SUBMENUS APARTIR DO TAMANHO MD DO BOOTSTRAP*/
+@media (min-width: 768px){
+  .nav-item:hover ul{
+      visibility: visible;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+  }
+}
+
+.nav-item ul li{
+  margin: 0;
+  padding: 0px 10px;   
+}
+.nav-item a, .nav-item .link{
+  margin: 0px 10px;
+}

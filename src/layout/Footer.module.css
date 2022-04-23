@@ -1,0 +1,13 @@
+.rodape{
+    text-align: center;
+    color: var(--cor-branco);
+    background: var(--cor-preto);
+    padding: 25px 0;
+}
+.creditos{
+    color: #f9c645;
+    text-decoration: underline;
+}
+.creditos:hover{
+    color: rgb(255, 0, 0);
+}

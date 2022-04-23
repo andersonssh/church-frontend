@@ -1,0 +1,16 @@
+.botao_menu_principal{
+    padding: 10px;
+    color: var(--cor-amarelo);
+    margin-right: 25px;
+    margin-left: 15px;
+    transition: .4s;
+}
+.botao_menu_principal:hover{
+    color: var(--cor-laranja);
+    background-color: inherit;
+}
+
+.botao_troca_site{
+    margin-top: 8px;
+    margin-right: 25px;
+}

@@ -22,8 +22,6 @@ function App(){
           <Route path="/desbravadores/especialidades" element={ <Especialidades setMenu={setMenu} /> }></Route>
         </Routes>
       </div>
-      
-
       <Footer />
     </Router>
   )
