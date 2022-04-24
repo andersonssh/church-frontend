@@ -1,0 +1,92 @@
+.alternative_button, .alternative_letter, .alternative_text{
+    margin: 0;
+	padding: 0;
+}
+.alternative_button{
+	width: 100%;
+	border: none;
+	text-align: left;
+	/*Cor do texto*/
+	color: #222222;
+	box-sizing: border-box;
+	display: flex;
+	align-items: stretch;
+	margin: 15px 0;
+	transition: 0.4s;
+}
+.alternative_button_hover:hover{
+    transition: 0.5s;
+	cursor: pointer;
+	background-color: #494747;
+	color: #fff;
+}
+.alternative_letter{
+	font-size: 30px;
+	font-weight: bold;
+	/*cor do fundo da letra do botao*/
+	background-color: #2e2d2e;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 10px;
+	
+}
+.alternative_text{
+    flex: 1 1 0;
+	padding: 15px 0;
+	align-items: center;
+	margin: 0 5px;
+	font-size: 18px;
+}
+.correct_alternative, .incorrect_alternative{
+    transition: 0.2s !important;
+	color: #fff !important;
+	border: none !important;
+}
+.correct_alternative{
+	background-color: #2eb94c !important;
+}
+
+.incorrect_alternative{
+	background-color: #e62210 !important;
+}
+.correct_alternative .alternative_letter,
+.incorrect_alternative .alternative_letter{
+    background-color: unset;
+}
+.disabled_button{
+    opacity: 70%;
+}
+
+.status_points{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.status_points span{
+    margin: 0 15px;
+}
+.status_points_correct{
+    color: green;
+}
+.status_points_error{
+    color: red;
+}
+.stop_button{
+    background-color: rgb(235, 120, 44);
+    color: var(--cor-branco);
+    padding: 10px 15px;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+    transition: .4s;
+}
+.stop_button:hover{
+    background-color: black;
+    border-radius: 15px;
+}

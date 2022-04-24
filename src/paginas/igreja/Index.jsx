@@ -3,7 +3,6 @@ import SlideFotos from "../../componentes/gerais/SlidesFotos"
 
 function Index({setMenu}){
     setMenu('igreja')
-    let versiculo = 'Aqui está a perseverança dos santos que obedecem aos mandamentos de Deus e permanecem fiéis a Jesus.'
     return (
         <>
             <p className="text-center mt-5">"Aqui está a perseverança dos santos que obedecem aos mandamentos de Deus e permanecem fiéis a Jesus." <br />Apocalipse 14:12</p>

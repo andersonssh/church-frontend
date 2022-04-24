@@ -1,3 +1,4 @@
+import Quiz from '../../componentes/igreja/Quiz'
 
 function QuizPage({setMenu}){
     setMenu('igreja')
@@ -6,7 +7,7 @@ function QuizPage({setMenu}){
     return (
         <>
         <h1>quiz page</h1>
-
+        <Quiz></Quiz>
         </>
     )
 }
