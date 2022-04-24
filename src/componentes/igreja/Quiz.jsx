@@ -46,10 +46,10 @@ function generateBlockEnd(status){
         )
     }
     return (
-        <>  
+        <div className={style.text_center}>  
             {message}
             <div className={style.block_final_score}>Sua pontuação final foi: <span className={style.final_score}>{finalScore}</span></div>
-        </>
+        </div>
     )
 }
 function isCorrectAnswer(clickedAlternativeIndex, correctAlternativeIndex){
@@ -167,10 +167,10 @@ function Quiz(){
         setBlockQuestion(generateBlockEnd(status))
     }
     return (
-        <div>
-
+        <div className={style.general_quiz_block}>
             {blockQuestion}
-            <button id="start-button" onClick={() => startQuiz()}>START</button>
+            
+            <div className={style.text_center}><button id="start-button" className={style.start_button} onClick={() => startQuiz()}>COMEÇAR</button></div>
             {isQuizActive && (
                 <div className={style.status_points}>
                     <div>
