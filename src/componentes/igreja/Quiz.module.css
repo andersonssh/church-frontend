@@ -90,3 +90,20 @@
     background-color: black;
     border-radius: 15px;
 }
+
+.block_final_score{
+	font-size: 30px;
+}
+.final_score{
+	color: rgb(40, 40, 253);
+}
+
+.finished_quiz{
+	color: green;
+}
+.stopped_quiz{
+	color: rgb(69, 121, 189);
+}
+.error_quiz{
+	color: red;
+}
