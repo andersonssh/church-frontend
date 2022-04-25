@@ -1,14 +1,17 @@
 import style from './Quiz.module.css'
-import {useState} from 'react'
-import { click } from '@testing-library/user-event/dist/click'
+import {useState, useEffect} from 'react'
+import api from '../../services/api'
 
 const POINTS_FOR_CORRECT_ANSWER = 100
+const SESSION_ID = Math.floor(Date.now() * Math.random()).toString(36)
 let currentQuestionIndex = 0
 let pointsForCorrectAnswer = POINTS_FOR_CORRECT_ANSWER
 let pointsForStopping = 0
 let pointsForIncorrectAnswer = 0
 let isQuizActive = false
 let finalScore = 0
+let quizMode = 'Ranqueado'
+
 
 function resetVariables(){
     pointsForStopping = 0
@@ -24,7 +27,7 @@ function generateBlockEnd(status){
         message = (
         <>
             <div className={style.finished_quiz + ' h2'}>
-                Você completou todas as questões! PARABÉNS!!
+                Você acertou todas as questões! <br />PARABÉNS!!
             </div>
         </>
         )
@@ -48,7 +51,7 @@ function generateBlockEnd(status){
     return (
         <div className={style.text_center}>  
             {message}
-            <div className={style.block_final_score}>Sua pontuação final foi: <span className={style.final_score}>{finalScore}</span></div>
+            <div className={style.block_final_score}>Você conseguiu: <span className={style.final_score}>{finalScore} </span>pontos!</div>
         </div>
     )
 }
@@ -58,7 +61,7 @@ function isCorrectAnswer(clickedAlternativeIndex, correctAlternativeIndex){
 function setVariablesForTheNextQuestion(){
     pointsForStopping = pointsForCorrectAnswer
     pointsForCorrectAnswer += POINTS_FOR_CORRECT_ANSWER
-    pointsForIncorrectAnswer = Math.trunc(pointsForStopping / 4)
+    pointsForIncorrectAnswer = Math.trunc(pointsForStopping / 2)
     currentQuestionIndex++
 }
 function disableAlternatives(n_alternatives){
@@ -84,17 +87,33 @@ function stylizeAlternatives(n_alternatives, clickedAlternativeIndex){
     }
 }
 
-function Quiz(){
-    let questions = [
-        {question: 'questao 1 OK!', alternatives: ['item 1', 'item 2'],
-        correct_alternative_index: 1},
-        {question: 'questao 2', alternatives: ['item 1q2', 'item 2q2', 'item 3q2'],
-        correct_alternative_index: 1},
-        {question: 'questao 3', alternatives: ['item 1 q3', 'item 2 q3', 'item 3 q3'],
-        correct_alternative_index: 1}
-    ]
+function Quiz({extraParams, score}){
+    // extraParams recebe os parametros extra para a rota GET
+    const [questions, setQuestions] = useState()
     const [blockQuestion, setBlockQuestion] = useState()
     const [isQuizActive, setIsQuizActive] = useState(false)
+    const [name, setName] = useState()
+    const [pass, setPass] = useState()
+
+    function fetchQuestions(){
+        extraParams = extraParams ? extraParams: ''
+        api.get('/quiz' + extraParams)
+        .then((response) => setQuestions(response.data))
+        .catch((err) => {
+            console.error('ERRO AO ENVIAR REQUISICAO PARA A API: ' + err)
+        })
+    }
+    function sendToRanking(){
+        api.post('/quiz/ranking', {
+            name: name,
+            score: finalScore,
+            pass: pass.toLowerCase(),
+            session_id: SESSION_ID}
+        ).catch((err) => console.error('ERRO AO ENVIAR REQUISICAO PARA A API: ' + err))
+    }
+    useEffect(() => {
+        fetchQuestions()
+    }, [])
 
     function changeForTheNextQuestion(question){
         let command = question.question
@@ -148,29 +167,52 @@ function Quiz(){
     }
     function startQuiz(){
         resetVariables()
-        document.querySelector('#start-button').style.display= 'none'
+        document.querySelector('#start-menu').style.display= 'none'
         setIsQuizActive(true)
         changeForTheNextQuestion(questions[currentQuestionIndex])
     }
     function stopQuiz(status){
         setIsQuizActive(false)
         if(status == 'error'){
-            console.log('errou!!!!')
             finalScore = pointsForIncorrectAnswer
         }else if (status == 'finished'){
-            console.log('finalizou!')
             finalScore = pointsForCorrectAnswer
         }else if (status == 'stopped'){
             finalScore = pointsForStopping
-            console.log('PAROU!!!!!!')
         }
-        setBlockQuestion(generateBlockEnd(status))
+        let blockEnd = <div className={style.menu_endblock}>
+        {generateBlockEnd(status)}
+        <div className={style.restart_button_block}>
+            <button className={style.quiz_button} onClick={() => restartQuiz()}>RESTART</button>
+        </div>
+        </div>
+        setBlockQuestion(blockEnd)
+        sendToRanking()
+    }
+    function restartQuiz(){
+        document.querySelector('#start-menu').style = ''
+        resetVariables()
+        setIsQuizActive(false)
+        setBlockQuestion()
+        fetchQuestions()
     }
     return (
         <div className={style.general_quiz_block}>
             {blockQuestion}
-            
-            <div className={style.text_center}><button id="start-button" className={style.start_button} onClick={() => startQuiz()}>COMEÇAR</button></div>
+            <div id="start-menu" className={style.text_center}>
+                <h3>{quizMode}</h3>
+                <div className={style.quiz_form_item}>
+                    <div>Seu Nome: </div>
+                    <input type="text" onChange={(e) => setName(e.target.value)}/>
+                </div>
+                <div className={style.quiz_form_item}>
+                    <div>Nome do ancião da igreja:</div>
+                    <input type="text" onChange={(e) => setPass(e.target.value)}/>
+                </div>
+                <div>
+                    <button className={style.quiz_button} onClick={() => startQuiz()}>COMEÇAR</button>
+                </div>
+            </div>
             {isQuizActive && (
                 <div className={style.status_points}>
                     <div>
@@ -178,7 +220,7 @@ function Quiz(){
                         <span className={style.status_points_stop}>PARAR: {pointsForStopping}</span>
                         <span className={style.status_points_correct}>ACERTAR: {pointsForCorrectAnswer}</span>
                     </div>
-                    <button className={style.stop_button} onClick={()=> stopQuiz('stopped')}>PARAR</button>
+                    <button className={style.quiz_button} onClick={()=> stopQuiz('stopped')}>PARAR</button>
                 </div>)}
        </div>
     )
