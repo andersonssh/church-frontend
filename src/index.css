@@ -9,6 +9,19 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
 }
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #241e35;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-amarelo);
+  border-radius: 20px;
+}
 .container{
   padding-top: 90px;
 }
