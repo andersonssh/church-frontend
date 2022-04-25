@@ -117,11 +117,15 @@ function Quiz({extraParams, setFetchRank}){
     }, [])
 
     function changeForTheNextQuestion(question){
-        let command = question.question
         let alternatives = question.alternatives
         let blockQ = []
-        blockQ.push(<p>QUESTÃO {currentQuestionIndex + 1}</p>)
-        blockQ.push(<p>{command}</p>)
+        blockQ.push(
+        <div className={style.quiz_top}>
+            <p>QUESTÃO {currentQuestionIndex + 1}</p>
+            <p className={'quiz-level-' + question.level}>Nível {question.level}</p>
+        </div>)
+
+        blockQ.push(<p>{question.question}</p>)
         for(let i = 0; i < alternatives.length; i++){
             blockQ.push(
                 <button key={Math.random().toString()} id={'index-' + i}

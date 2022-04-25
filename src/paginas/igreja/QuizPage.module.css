@@ -1,5 +1,6 @@
 .title{
     margin: 60px;
+    visibility: hidden;
 }
 .ranking{
     max-width: 350px;
@@ -24,5 +25,5 @@
     border-radius: 15px;
 }
 .ranking_block{
-    margin-top: 100px;
+    margin-top: 150px;
 }

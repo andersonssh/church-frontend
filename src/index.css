@@ -122,3 +122,13 @@ a:hover, .link:hover{
 .nav-item a, .nav-item .link{
   margin: 0px 10px;
 }
+
+.quiz-level-1{
+  color: blue;
+}
+.quiz-level-2{
+  color: green;
+}
+.quiz-level-3{
+  color: red;
+}

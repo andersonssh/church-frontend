@@ -1,3 +1,8 @@
+.quiz_top{
+	display: flex;
+	justify-content: space-between;
+	padding-right: 10px;
+}
 .general_quiz_block, .menu_endblock{
 	min-height: 300px;
 	min-width: 300px;
