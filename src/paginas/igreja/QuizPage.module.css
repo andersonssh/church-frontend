@@ -1,0 +1,28 @@
+.title{
+    margin: 60px;
+}
+.ranking{
+    max-width: 350px;
+    margin: 20px auto;
+    border: 1px solid black;
+    padding: 5px 5px 0 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.update_ranking{
+    background-color: black;
+    color: var(--cor-branco);
+    padding: 10px 15px;
+    border: none;
+    margin: 20px;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.update_ranking:hover{
+    background-color: rgb(235, 120, 44);
+    border-radius: 15px;
+}
+.ranking_block{
+    margin-top: 100px;
+}

@@ -87,7 +87,7 @@ function stylizeAlternatives(n_alternatives, clickedAlternativeIndex){
     }
 }
 
-function Quiz({extraParams}){
+function Quiz({extraParams, setFetchRank}){
     // extraParams recebe os parametros extra para a rota GET
     const [questions, setQuestions] = useState()
     const [blockQuestion, setBlockQuestion] = useState()
@@ -109,7 +109,8 @@ function Quiz({extraParams}){
             score: finalScore,
             pass: pass.toLowerCase(),
             session_id: SESSION_ID}
-        ).catch((err) => console.error('ERRO AO ENVIAR REQUISICAO PARA A API: ' + err))
+        ).then(()=> setFetchRank(true))
+        .catch((err) => console.error('ERRO AO ENVIAR REQUISICAO PARA A API: ' + err))
     }
     useEffect(() => {
         fetchQuestions()
