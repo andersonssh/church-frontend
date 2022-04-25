@@ -87,7 +87,7 @@ function stylizeAlternatives(n_alternatives, clickedAlternativeIndex){
     }
 }
 
-function Quiz({extraParams, score}){
+function Quiz({extraParams}){
     // extraParams recebe os parametros extra para a rota GET
     const [questions, setQuestions] = useState()
     const [blockQuestion, setBlockQuestion] = useState()
@@ -203,7 +203,7 @@ function Quiz({extraParams, score}){
                 <h3>{quizMode}</h3>
                 <div className={style.quiz_form_item}>
                     <div>Seu Nome: </div>
-                    <input type="text" onChange={(e) => setName(e.target.value)}/>
+                    <input type="text" maxlength="20" onChange={(e) => setName(e.target.value)}/>
                 </div>
                 <div className={style.quiz_form_item}>
                     <div>Nome do ancião da igreja:</div>
