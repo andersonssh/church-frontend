@@ -4,7 +4,6 @@ import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
 import Index from './paginas/igreja/Index'
 import IndexDbv from './paginas/dbv/Index'
-import Especialidades from './paginas/dbv/Especialidades'
 import QuizPage from './paginas/igreja/QuizPage'
 
 function App(){
@@ -17,9 +16,7 @@ function App(){
         <Routes>
           <Route path="/" element={ <Index setMenu={setMenu} /> }></Route>
           <Route path="/quiz" element={ <QuizPage setMenu={setMenu} />} ></Route>
-
           <Route path="/desbravadores" element={ <IndexDbv setMenu={setMenu}/> }></Route>
-          <Route path="/desbravadores/especialidades" element={ <Especialidades setMenu={setMenu} /> }></Route>
         </Routes>
       </div>
       <Footer />

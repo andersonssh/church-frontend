@@ -49,12 +49,8 @@ function Navbar({menu}){
                             <li className="nav-item">
                                 <Link to="/">Início</Link>
                             </li>
-                            <li className={'nav-item ' + submenu} onClick={mudaSubmenu}>
-                                <span className="link"> Diversão <i className="fal fa-angle-down"></i></span>
-                                <ul className='navbar-nav'>
-                                    <li className="nav-item"><Link to="/quiz">Quiz</Link></li>
-                                    <li className='nav-item'><Link to="/jogos">Jogos</Link></li>
-                                </ul>
+                            <li className="nav-item">
+                                <Link to="/quiz">Quiz</Link>
                             </li>
                             <li className={'nav-item ' + style.botao_troca_site}>
                                 <Link to="/desbravadores">
@@ -76,9 +72,6 @@ function Navbar({menu}){
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
                                 <Link to="/desbravadores">Início</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/desbravadores/especialidades">Especialidades</Link>
                             </li>
                             <li className={'nav-item ' + style.botao_troca_site}>
                                 <Link to="/">
